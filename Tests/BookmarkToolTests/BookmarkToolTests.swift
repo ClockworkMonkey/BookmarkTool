@@ -14,7 +14,7 @@ final class BookmarkToolTests: XCTestCase {
         if let fileURL = Bundle.module.url(forResource: "Chrome", withExtension: "html", subdirectory: "Resources") {
             do {
                 let htmlString = try String(contentsOf: fileURL)
-                if let bookmarks = parseBookmarks(htmlString: htmlString) {
+                if let bookmarks = BookmarkTool().parseBookmarks(htmlString: htmlString) {
                     // 将解析结果转换为 JSON 格式
                     print(bookmarks)
                 }
