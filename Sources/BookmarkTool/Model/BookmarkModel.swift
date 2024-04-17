@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - BookmarkModel
-struct BookmarkModel: Codable {
+public struct BookmarkModel: Codable {
     var id: String?
     var type: String
     var name, url, iconData, iconURL, description, createDate, updateDate: String?

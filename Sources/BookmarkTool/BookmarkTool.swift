@@ -9,7 +9,7 @@ import Foundation
 import SwiftSoup
 
 public struct BookmarkTool {
-    func parseBookmarks(htmlString: String) -> [BookmarkModel]? {
+    public func parseBookmarks(htmlString: String) -> [BookmarkModel]? {
         do {
             let document = try SwiftSoup.parse(htmlString)
             guard let body = document.body() else { return nil }
