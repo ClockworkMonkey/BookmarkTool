@@ -9,7 +9,7 @@ import Foundation
 import SwiftSoup
 
 public struct BookmarkTool {
-    public func parseBookmarks(htmlString: String) -> [BookmarkModel]? {
+    public static func parseBookmarks(htmlString: String) -> [BookmarkModel]? {
         do {
             let document = try SwiftSoup.parse(htmlString)
             guard let body = document.body() else { return nil }
@@ -26,7 +26,7 @@ public struct BookmarkTool {
         }
     }
     
-    func parseElements(elements: Elements, bookmarks: inout [BookmarkModel], elementList: inout [Element]) {
+    private static func parseElements(elements: Elements, bookmarks: inout [BookmarkModel], elementList: inout [Element]) {
         elements.forEach { element in
 
             // 判断是否被读取循环过
@@ -66,5 +66,4 @@ public struct BookmarkTool {
             }
         }
     }
-
 }
