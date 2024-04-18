@@ -9,8 +9,8 @@ import Foundation
 
 // MARK: - BookmarkModel
 public struct BookmarkModel: Codable {
-    var id: String?
-    var type: String
-    var name, url, iconData, iconURL, description, createDate, updateDate: String?
-    var children: [BookmarkModel]
+    public var id: String?
+    public var type: String
+    public var name, url, iconData, iconURL, description, createDate, updateDate: String?
+    public var children: [BookmarkModel]
 }
